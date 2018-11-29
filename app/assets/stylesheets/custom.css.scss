@@ -1,2 +1,98 @@
+$navbar-default-bg:#FFF2A9;
+$base-color:#333333;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float:left;
+  font-size:1.7em;
+  color:red;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color:#fff;
+  text-decoration: none;
+}
+
+.jumbotron{
+  // border-radius:5%;
+  // background-image:asset-url('cover.jpg');
+  // background-size:cover;
+  // height:30rem;
+  // width:80rem;
+  background-image: linear-gradient(
+     to right bottom,
+     rgba(white, .7),
+     rgba($navbar-default-bg, .8)),
+  url(cover.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+.jumbo-mask{
+    // background: rgba(255,255,255,0.5);
+    // height:100%;
+    // width:100%;
+}
+
+.jumbo-message{
+  text-align:center;
+  color: $base-color;
+}
+
+.signup{
+  
+  &,
+  &:link,
+  &:visited {
+  background:#FBD558;
+  color:$base-color;
+  text-transform:uppercase;
+  cursor:pointer;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  transition: all .2s;
+  border: none;
+  position: relative;
+  }
+  
+  &:hover{
+  transform:translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.6);
+  color:$base-color;
+  background:$navbar-default-bg;
+  
+  }
+  
+  
+  &::after {
+      content:"";
+      display:inline-block;
+      height:100%;
+      width:100%;
+      position:absolute;
+      top:0;
+      left:0;
+      z-index:-1;
+      transition: all .2s;
+    }
+}
+.signup-white{
+  background:$navbar-default-bg;
+}
+
+.signup-white::after{
+  background:$navbar-default-bg;
+}
+
+.signup:hover::after {
+  transform: scale(2);
+  opacity:0;
+
+}
+
+
