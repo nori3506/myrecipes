@@ -28,7 +28,7 @@ $base-color:#333333;
      to right bottom,
      rgba(white, .7),
      rgba($navbar-default-bg, .8)),
-  url(cover.jpg);
+  image-url(cover.jpg);
   background-size: cover;
   background-position: top;
 }
