@@ -48,7 +48,7 @@ $base-color:#333333;
   
   &,
   &:link,
-  &:visited {
+  &:visited{
   background:#FBD558;
   color:$base-color;
   text-transform:uppercase;
@@ -95,4 +95,22 @@ $base-color:#333333;
 
 }
 
+.description{
+  margin-top:0;
+  text-align:center;
+}
+
+.well a{
+  color:#333333;
+  
+}
+
+.chef_info{
+  margin-top:10px;
+}
+
+.return-link a{
+  color:#333333;
+  text-align:center;
+}
 
