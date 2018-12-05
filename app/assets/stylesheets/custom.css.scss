@@ -114,3 +114,14 @@ $base-color:#333333;
   text-align:center;
 }
 
+.listing{
+  list-style: name;
+  padding-left:0;
+}
+
+.chef-title {
+  color: $base-color;
+  font-size: 1.25em;
+  font-weight:bold;
+}
+
