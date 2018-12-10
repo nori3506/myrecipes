@@ -11,6 +11,14 @@
       <p>
         <span class="quiet"><small><%= time_ago_in_words(recipe.created_at) %> ago</small></span>
       </p>
+      <% if logged_in? && current_chef == recipe.chef %>
+        <div class="recipe-action">
+          <%= link_to "Edit this recipe", edit_recipe_path(recipe), class:"btn btn-xs signup" %>
+          <%= link_to "Delete this recipe", recipe_path(recipe), method: :delete,
+                                            data: {confirm:"Are you sure to delete this recipe?"},
+                                            class: "btn btn-danger" %>
+        </div>
+      <% end %>
     </div>
   </div>
 <% end %>

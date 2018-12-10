@@ -18,10 +18,12 @@
     </p>
   </div>
   <div class="recipe-actions">
-    <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class:"btn btn-xs signup" %>
-    <%= link_to "Delete this recipe", recipe_path(@recipe), method: :delete,
-                                      data: {confirm:"Are you sure to delete this recipe?"},
-                                      class: "btn btn-danger" %>
+    <% if logged_in? && current_chef == @recipe.chef %>
+      <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class:"btn btn-xs signup" %>
+      <%= link_to "Delete this recipe", recipe_path(@recipe), method: :delete,
+                                        data: {confirm:"Are you sure to delete this recipe?"},
+                                        class: "btn btn-danger" %>
+    <% end %>                                      
     <%= link_to "Return to recipes listing", recipes_path, class: "btn btn-primary" %>
   </div>
 </div>
