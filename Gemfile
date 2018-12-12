@@ -58,6 +58,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'redis', '~> 3.3'
 end
 
 group :test do
