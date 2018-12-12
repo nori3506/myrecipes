@@ -14,8 +14,9 @@ before_action :require_admin, only: [:destroy]
   
   def create
     @chef = Chef.new(chef_params)
-      if @chef.save
+    if @chef.save
       session[:chef_id] = @chef.id
+      cookies.signed[:chef_id] = @chef.id
       flash[:success]="Welcome #{@chef.chefname} to MyRecipes APP!"
       redirect_to @chef
     else
